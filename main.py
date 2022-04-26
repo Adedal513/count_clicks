@@ -8,9 +8,6 @@ from dotenv import load_dotenv
 from requests import exceptions, get, post
 
 
-load_dotenv()
-token = os.environ["BITLY_TOKEN"]
-request_header = {"Authorization": f"Bearer {token}"}
 API_URL = "https://api-ssl.bitly.com/v4/"
 
 
@@ -59,6 +56,9 @@ def strip_url(url: str) -> str:
 
 
 def main():
+    load_dotenv()
+    token = os.environ["BITLY_TOKEN"]
+    request_header = {"Authorization": f"Bearer {token}"}
 
     parser = argparse.ArgumentParser(
         description="Сокращение ссылок при помощи сервиса Bitly и вывод сатистики по кликам"
