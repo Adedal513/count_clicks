@@ -1,14 +1,9 @@
 import argparse
 import os
 
-
 from urllib.parse import urlparse
 
-import dotenv
-
 from dotenv import load_dotenv
-
-import requests
 
 from requests import exceptions
 from requests import get
