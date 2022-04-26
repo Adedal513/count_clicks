@@ -5,9 +5,7 @@ from urllib.parse import urlparse
 
 from dotenv import load_dotenv
 
-from requests import exceptions
-from requests import get
-from requests import post
+from requests import exceptions, get, post
 
 
 load_dotenv()
